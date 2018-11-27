@@ -1,25 +1,21 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {RouterLink, RouterView} from "./route/index";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+
+          <ul>
+              <li><RouterLink to={"/a"}>/a</RouterLink></li>
+              <li><RouterLink to={"/b"}>/b</RouterLink></li>
+              <li><RouterLink to={"/a/c"}>/a/c</RouterLink></li>
+              <li><RouterLink to={"/a/d"}>/a/d</RouterLink></li>
+              <li><RouterLink to={"/a/c/b"}>/a/c/b</RouterLink></li>
+          </ul>
+          <RouterView></RouterView>
+
       </div>
     );
   }
